@@ -1,35 +1,45 @@
 import Header from "@/conponements/header";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="bg-white min-h-screen">
-      <h1 className="text-2xl text-red-600">hei</h1>
-      <p className="text-red-600">jeg heter Mikael</p>
-      <Link className="text-red-600" href="http://localhost:3000/projekter">
-        projekter
-      </Link>
-      <Link className="text-red-600" href="https://echo.uib.no/hjem">
-        echo
-      </Link>
+    <div className="max-h-screen">
+      <Button>🌓</Button>
       <div className="flex justify-center">
-        <img src="/Snapchat-1031077897.png" className="max-w-64" />
-      </div>
-      <div>
-        <h1>Socials</h1>
-        <ul className="text-black">
-          <li>
-            <Link href="https://www.facebook.com/profile.php?id=100006384786377">
-              Facebook
-            </Link>
-          </li>
-          <li>
-            <Link href="https://www.instagram.com/_mikaeloverland/">
-              Instagram
-            </Link>
-          </li>
-        </ul>
+        <div className="p-8">
+          <img
+            src="syden.jpeg"
+            alt=""
+            className="rounded-full max-h-100 max-w-60"
+          />
+        </div>
+        <div className="max-w-100 p-8">
+          <h1>Dette er meg 😎</h1>
+          <p>
+            Jeg heter Mikael og er 22 år fra Trondheim. Jeg er førsteårsstudent
+            på Informatikk: Datateknologi ved UIB.
+          </p>
+          <ul>
+            <li>
+              <Link
+                href="https://www.facebook.com/profile.php?id=100006384786377"
+                className="text-blue-600 visited:text-purple-600 hover:text-blue-600"
+              >
+                Facebook
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.instagram.com/_mikaeloverland/"
+                className="text-blue-600 visited:text-purple-600 hover:text-blue-600"
+              >
+                Instagram
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
