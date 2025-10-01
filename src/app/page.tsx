@@ -2,6 +2,7 @@ import Header from "@/conponements/header";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import "./globals.css";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <div className="flex justify-center">
         <div className="p-8">
           <img
-            src="syden.jpeg"
+            src="Snapchat-1031077897.png"
             alt=""
             className="rounded-full max-h-100 max-w-60"
           />
@@ -21,6 +22,7 @@ export default function Home() {
             Jeg heter Mikael og er 22 år fra Trondheim. Jeg er førsteårsstudent
             på Informatikk: Datateknologi ved UIB.
           </p>
+          <h1>Socials</h1>
           <ul>
             <li>
               <Link
