@@ -5,7 +5,7 @@ export default function Header() {
     <div className="flex justify-between bg-black-400 p-8 border-b-20">
       <Link href="/">Hjem</Link>
       <Link href="/apiLek">BATMAN🦇</Link>
-      <Link href="/projekter">Projektermappe</Link>
+      <Link href="/projekter">Prosjektermappe</Link>
     </div>
   );
 }

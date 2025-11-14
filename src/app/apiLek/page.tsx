@@ -1,20 +1,22 @@
 import Header from "@/conponements/header";
 import { getMovie } from "@/lib/movies";
+import Image from "next/image";
 
-export default async function () {
+export default async function Page() {
   const data = await getMovie();
-  const movies = data.Search;
+  const movies = data?.Search ?? [];
 
   return (
     <div>
-      {movies.map((movie) => {
-        return (
+      <Header />
+      {movies.map(
+        (movie: { imdbID: string; Title: string; Poster: string }) => (
           <div key={movie.imdbID} className="border">
             <h1>{movie.Title}</h1>
-            <img src={movie.Poster} alt={movie.Title} />
+            <Image src={movie.Poster} alt={movie.Title} />
           </div>
-        );
-      })}
+        )
+      )}
     </div>
   );
 }
